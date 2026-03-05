@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details — TechVault">
+    <title>Product Details — TechVault</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- ─── Navigation ─── -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#6c63ff" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                TechVault
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+
+            <ul class="navbar-links">
+                <li><a href="/">Shop</a></li>
+                <li>
+                    <a href="/cart.html" class="cart-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" />
+                        </svg>
+                        Cart
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="navbar-auth"></div>
+        </div>
+    </nav>
+
+    <!-- ─── Product Detail ─── -->
+    <section class="container page-content">
+        <a href="/"
+            style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--text-secondary); margin-bottom:2rem; font-size:0.875rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Products
+        </a>
+        <div class="product-detail" id="product-detail">
+            <div class="skeleton" style="height:500px; border-radius:16px;"></div>
+            <div>
+                <div class="skeleton" style="height:30px; width:80px; margin-bottom:1rem;"></div>
+                <div class="skeleton" style="height:40px; width:80%; margin-bottom:1rem;"></div>
+                <div class="skeleton" style="height:40px; width:150px; margin-bottom:2rem;"></div>
+                <div class="skeleton" style="height:80px; margin-bottom:2rem;"></div>
+                <div class="skeleton" style="height:50px; width:200px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TechVault. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/product-detail.js"></script>
+</body>
+
+</html>

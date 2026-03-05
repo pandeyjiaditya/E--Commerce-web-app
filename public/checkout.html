@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Checkout — TechVault">
+    <title>Checkout — TechVault</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- ─── Navigation ─── -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#6c63ff" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                TechVault
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="/">Shop</a></li>
+                <li><a href="/cart.html">Cart</a></li>
+            </ul>
+
+            <div class="navbar-auth"></div>
+        </div>
+    </nav>
+
+    <section class="container page-content">
+        <h1 class="section-title" style="margin-bottom: 2rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="vertical-align: middle;">
+                <path
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Secure Checkout
+        </h1>
+
+        <div class="checkout-layout">
+            <div>
+                <!-- Shipping Address -->
+                <div class="checkout-section">
+                    <h2>
+                        <span class="step-number">1</span>
+                        Shipping Address
+                    </h2>
+                    <div class="form-group">
+                        <label class="form-label" for="shipping-address">Delivery Address</label>
+                        <textarea id="shipping-address" class="form-input" rows="3"
+                            placeholder="Enter your full shipping address..." style="resize:vertical;"></textarea>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="checkout-section">
+                    <h2>
+                        <span class="step-number">2</span>
+                        Payment
+                    </h2>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1.5rem;">
+                        🔒 Your payment is secured by PayPal. Click below to pay with your PayPal account or
+                        credit/debit card.
+                    </p>
+                    <div id="paypal-button-container">
+                        <div class="skeleton" style="height:50px; border-radius:8px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div id="checkout-order-summary">
+                    <div class="skeleton" style="height:60px; margin-bottom:0.75rem;"></div>
+                    <div class="skeleton" style="height:60px; margin-bottom:0.75rem;"></div>
+                    <div class="skeleton" style="height:30px; margin-top:1rem;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TechVault. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- PayPal SDK — Sandbox -->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AYSq3RDGsmBLJE-otTkBtM-jBRd1TCQwFf9RGfwddNXWz0uFU9ztymylOhRS&currency=USD"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/checkout.js"></script>
+</body>
+
+</html>

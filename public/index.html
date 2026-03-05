@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechVault — Premium electronics store with the latest gadgets, accessories, and tech at great prices.">
+  <title>TechVault — Premium Electronics Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ─── Navigation ─── -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2">
+          <defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6c63ff"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+        TechVault
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+
+      <ul class="navbar-links">
+        <li><a href="/" class="active">Shop</a></li>
+        <li>
+          <a href="/cart.html" class="cart-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+            </svg>
+            Cart
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="navbar-auth"></div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero Section ─── -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Discover <span>Premium Tech</span></h1>
+      <p class="hero-subtitle">The latest electronics, gadgets, and accessories — all in one place with fast shipping and secure payments.</p>
+      <div class="hero-search">
+        <input type="text" id="search-input" placeholder="Search products...">
+        <button id="search-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Category Filters ─── -->
+  <section class="container">
+    <div class="category-filters" id="category-filters"></div>
+  </section>
+
+  <!-- ─── Products Grid ─── -->
+  <section class="container page-content">
+    <div class="products-grid" id="products-grid">
+      <!-- Skeleton loading -->
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 TechVault. All rights reserved. Built with ♥</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/products.js"></script>
+</body>
+</html>
